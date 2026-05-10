@@ -110,7 +110,7 @@ a:hover {
 
 .project-card img {
   width: 100%;        /* fills the card width */
-  max-width: 400px;   /* keeps them from getting too huge */
+  max-width: 300px;   /* keeps them from getting too huge */
   height: auto;       /* maintains aspect ratio */
   border-radius: 8px; /* rounded corners */
   margin-bottom: 10px;
@@ -221,3 +221,38 @@ a:hover {
   }
 }
 
+<body class="projects-page">
+
+/* Projects page only */
+body.projects-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fdf2f8; /* softer pink background */
+}
+
+/* Headings on Projects page */
+body.projects-page h1,
+body.projects-page h2,
+body.projects-page h3 {
+  color: #cc3366; /* deep rose */
+}
+
+/* Paragraphs on Projects page */
+body.projects-page p {
+  color: #444444; /* slightly darker gray for readability */
+}
+
+/* Project cards */
+body.projects-page .project-card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+body.projects-page .project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
