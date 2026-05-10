@@ -1,0 +1,223 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #ffe6f0;
+}
+
+header {
+  background: #ff99cc;
+  padding: 10px;
+}
+
+nav {
+  background: rgba(255, 182, 193, 0.3); /* soft pink translucent */
+  backdrop-filter: blur(10px);          /* glassmorphism effect */
+  border-radius: 12px;
+  padding: 10px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+/* Global heading colors */
+h1, h2, h3 {
+  color: #cc3366; /* deep rose */
+}
+
+/* Global paragraph text */
+p {
+  color: #333333; /* dark gray for readability */
+}
+
+/* Links */
+a {
+  color: #cc3366; /* deep rose links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff3399; /* brighter pink hover */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #cc3366; /* deep rose text */
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #ff3399; /* brighter pink on hover */
+  transform: scale(1.1); /* gentle pop-up effect */
+}
+
+.home-bg {
+  background: url("background.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.hero button {
+  background: #ff3399;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero button:hover {
+  transform: scale(1.1);
+  background: #cc3366;
+}
+
+
+
+.profile-img {
+  width: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #ff99cc;
+}
+
+.hobby {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.hobby-img {
+  width: 250px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card img {
+  width: 100%;        /* fills the card width */
+  max-width: 400px;   /* keeps them from getting too huge */
+  height: auto;       /* maintains aspect ratio */
+  border-radius: 8px; /* rounded corners */
+  margin-bottom: 10px;
+}
+
+.popup-card {
+  background: rgba(255, 255, 255, 0.25); /* translucent glass */
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 25px;
+  margin: 30px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25); /* deeper shadow */
+  max-width: 900px;
+  animation: fadeInUp 1s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popup-card:hover {
+  transform: translateY(-10px) scale(1.02); /* gentle lift */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+
+/* Simple fade-in pop-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+.skill-item {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-8px); /* pop-up hover effect */
+}
+
+.skills h2 {
+  color: #cc3366; /* deep rose for section title */
+}
+
+.skill-item h3 {
+  margin-top: 0;
+  color: #ff3399;
+}
+
+.skill-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* space between photo and text */
+}
+
+.about-photo img {
+  width: 220px;
+  height: auto;
+  border-radius: 50%; /* circular photo */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.about-bio {
+  max-width: 500px;
+}
+
+.about-bio h2 {
+  color: #cc3366; /* deep rose heading */
+  margin-bottom: 15px;
+}
+
+.about-bio p {
+  color: #333333; /* dark gray for readability */
+  line-height: 1.6;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo img {
+    margin-bottom: 20px;
+  }
+}
+
